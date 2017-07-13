@@ -1,0 +1,19 @@
+Framework:dropwizard +MongoDB - 
+
+Api: Json web service that responds with json message http status code
+
+    GET     /fuber/taxi/get/{licensePlate}
+    Find Taxi's given a licensePlate
+
+    GET    /fuber/taxi/register/{licensePlate}/{latitude}/{longitude}/{isPink} 
+    Allow taxi's to be registered as available 
+
+    GET     /fuber/taxi/unregister/{licenseplate} 
+    Remove taxi when taxi is no longer available
+
+    GET     /fuber/taxi/reserve/{latitude}/{longitude}/{isPink} 
+    Reserve taxi within configurable distance range .Try to reserve .Allows a few tries in case new taxis became available and desired taxi was booked
+
+    GET     /fuber/taxi/free/{licenseplate}/{latitude}/{longitude} 
+    Set taxi as available from drop off location
+
